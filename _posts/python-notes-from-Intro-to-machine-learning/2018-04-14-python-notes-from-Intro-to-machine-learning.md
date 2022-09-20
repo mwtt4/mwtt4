@@ -107,6 +107,30 @@ Para isso podemos utilizar o comando **terraform plan** que verifica tudo que es
 
 Existe também o comando **terraform plan -out infra-1** que envia o plano para um arquivo binário(nesse caso será o infra-1) assim deixando mais organizado suas alterações futuras.
 
+<figure>
+<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
+<figcaption>Fig 4. Terraform plan.</figcaption>
+</figure>
+
+- o **+** indica que a máquina e os recursos vão ser criados
+
+Agora vamos utilizar o comando **terraform apply "infra-1"** para criar de fato tudo que apareceu na imagem anterior:
+
+<figure>
+<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
+<figcaption>Fig 5. Terraform apply.</figcaption>
+</figure>
+
+A criação foi feita com sucesso, validando no console da aws:
+
+<figure>
+<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
+<figcaption>Fig 6. AWS Result.</figcaption>
+</figure>
+
+Validando o arquivo de state no bucket:
+
+
 
 **This article is for Demo purpose**
 
