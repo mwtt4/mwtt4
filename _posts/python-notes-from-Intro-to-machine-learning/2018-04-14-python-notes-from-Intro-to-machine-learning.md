@@ -74,8 +74,7 @@ Eu prefiro sempre iniciar com o que tem a flag de upgrade, pois caso tenha algo 
 
 Após iniciado, vamos criar uma máquina lá na AWS utilizando o código **main.tf** e **ec2.tf**
 
-**main.tf**: 
-
+## **main.tf**: 
 ```terraform
 provider "aws" {
     region = "us-east-1"
@@ -91,7 +90,9 @@ terraform {
 }
 ```
 
-**ec2.tf**:
+
+## **ec2.tf**:
+```terraform
 resource "aws_instance" "mwtt4" {
     ami = "ami-0b0ea68c435eb488d"
     instance_type = "t2.micro"
@@ -100,6 +101,7 @@ tags = {
     Name = "Hello"
  }
 } 
+```
 
 Para isso podemos utilizar o comando **terraform plan** que verifica tudo que está no código e te da um panorama do que vai ser feito, faz um diff entre a infraestrutura (máquinas que você já tem) o state e faz a criação.
 
