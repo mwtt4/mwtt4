@@ -60,7 +60,8 @@ Uma boa prática é você colocar essas chaves em um cofre como o Vault da próp
 
 Com tudo preparado, utilizei os comandos abaixo para iniciar o terraform:
 
-
+- **terraform init =** Inicia o terraform criando o arquivo .terraform na pasta, faz a leitura de todos os arquivos que contém a extensão .tf no nome.
+- **terraform init -upgrade =** Faz as mesmas ações do outro comando, porém atualiza também todos os plugins que você tem
 
 
 
