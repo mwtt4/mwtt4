@@ -13,6 +13,12 @@ Terraform é uma ferramenta IAC open source criada pela [Hashicorp](https://www.
 
 O Terraform não faz uma comunicação direta com a plataforma, ele faz o uso de Providers que são plugins e esses fazem essa ponte com a cloud
 
+<figure>
+<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
+<figcaption>Fig 1. Arquitetura Terraform.</figcaption>
+</figure>
+
+
 ### Como ele funciona?
 
 O binário do terraform lê o arquivo HCL(o seu codigo.tf), publica na cloud e após a publicação é armazeando o estado do que foi feito no arquivo de state.
@@ -29,6 +35,34 @@ Também podemos criar um container com o docker contendo a imagem do terraform, 
 ### Plataforma Cloud:
 
 Nesse caso escolhi a AWS para o provisionamento da infraestrutura, nela mesmo criei um usuário denominado terraform e apliquei uma role com a policy de administrator apenas para fazer o teste da ferramenta.
+
+<figure>
+<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
+<figcaption>Fig 2. Users - AWS.</figcaption>
+</figure>
+
+Após a criação do usuário gerei as credenciais AWS Access Key e Secret Acces Key, pois essas duas chaves são necessárias para o Terraform saber quem é o usuário que irá provisionar os recursos.
+
+Criei um bucket s3 que irá servir para armazenar nosso arquivo de state do Terraform, mas você pode também deixar esse arquivo local na máquina.
+
+### Exportando as chaves:
+
+Abra o terminal do seu SO e exporte as chaves geradas do seu usuário terraform, como estou no windows, fiz da seguinte forma no Power Shell:
+
+- `Set-Item -Path env:AWS_ACCESS_KEY_ID -Value "valor"`
+- `Set-Item -Path env:AWS_SECRET_ACCESS_KEY -Value "valor"`
+
+Por questões de seguranç  não coloquei as chaves de acesso da AWS no código .tf apenas exportei como variáveis de ambiente.
+
+Uma boa prática é você colocar essas chaves em um cofre como o Vault da própria Hashicorp.
+
+### Iniciando o Terraform: 
+
+Com tudo preparado, utilizei os comandos abaixo para iniciar o terraform:
+
+
+
+
 
 **This article is for Demo purpose**
 
