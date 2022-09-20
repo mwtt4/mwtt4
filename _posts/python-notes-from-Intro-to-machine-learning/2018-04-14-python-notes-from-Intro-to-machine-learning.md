@@ -91,6 +91,20 @@ terraform {
 }
 ```
 
+**ec2.tf**:
+resource "aws_instance" "mwtt4" {
+    ami = "ami-0b0ea68c435eb488d"
+    instance_type = "t2.micro"
+
+tags = {
+    Name = "Hello"
+ }
+} 
+
+Para isso podemos utilizar o comando **terraform plan** que verifica tudo que está no código e te da um panorama do que vai ser feito, faz um diff entre a infraestrutura (máquinas que você já tem) o state e faz a criação.
+
+Existe também o comando **terraform plan -out infra-1** que envia o plano para um arquivo binário(nesse caso será o infra-1) assim deixando mais organizado suas alterações futuras.
+
 
 **This article is for Demo purpose**
 
