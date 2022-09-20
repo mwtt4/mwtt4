@@ -5,6 +5,14 @@ tags: [python, machine-learning]
 description: Notes and code snippets of Python that I've been collecting so far throughout the "Intro to Machine Learning" course.
 ---
 
+### O que é o Terraform?
+
+Terraform é uma ferramenta IAC open source criada pela [Hashicorp](https://www.terraform.io/) que utiliza a linguagem HCL(derivada do YAML) para o provisionamento de infraestruturas em diversas plataformas cloud.
+
+### Arquitetura
+
+O Terraform não faz uma comunicação direta com a plataforma, ele faz o uso de Providers que são plugins e esses fazem essa ponte com a cloud
+
 **This article is for Demo purpose**
 
 The article was originally on [this repo](https://github.com/risan/risanb.com/blob/master/content/posts/python-notes-from-intro-to-machine-learning/index.md)
