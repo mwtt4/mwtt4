@@ -1,5 +1,5 @@
 ---
-title: Terraform Básico "#" 1
+title: Terraform Básico #1
 date: 2022-07-09 10:00:00 +07:00
 tags: [terraform, devops]
 description: Explicando o básico do Terraform.
