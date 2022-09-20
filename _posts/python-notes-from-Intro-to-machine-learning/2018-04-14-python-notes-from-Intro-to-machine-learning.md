@@ -7,7 +7,7 @@ description: Explicando o básico do Terraform.
 
 ### O que é o Terraform?
 
-Terraform é uma ferramenta IAC open source criada pela [Hashicorp](https://www.terraform.io/) que utiliza a linguagem HCL(derivada do YAML) para o provisionamento de infraestruturas em diversas plataformas cloud.
+Terraform é uma ferramenta IAC open source criada pela [Hashicorp](https://www.hashicorp.com/) que utiliza a linguagem HCL(derivada do YAML) para o provisionamento de infraestruturas em diversas plataformas cloud.
 
 ### Arquitetura
 
@@ -19,8 +19,16 @@ O binário do terraform lê o arquivo HCL(o seu codigo.tf), publica na cloud e a
 
 ### Primeiros passos:
 
-De início baixar o binário do terraform no site oficial se você estiver usando Windows, caso esteja no Linux ou MacOs utilizar a linha de comando no terminal mesmo.
+De início baixar o binário do terraform no [site oficial](https://www.terraform.io/downloads) se você estiver usando Windows, caso esteja no Linux ou MacOs utilizar a linha de comando no terminal mesmo.
 
+- `apt install terraform(Linux)`
+- `brew install terraform(Mac)`
+
+Também podemos criar um container com o docker contendo a imagem do terraform, caso prefira dessa forma, aqui está o [link](https://hub.docker.com/r/hashicorp/terraform/) da imagem
+
+### Plataforma Cloud:
+
+Nesse caso escolhi a AWS para o provisionamento da infraestrutura, nela mesmo criei um usuário denominado terraform e apliquei uma role com a policy de administrator apenas para fazer o teste da ferramenta.
 
 **This article is for Demo purpose**
 
