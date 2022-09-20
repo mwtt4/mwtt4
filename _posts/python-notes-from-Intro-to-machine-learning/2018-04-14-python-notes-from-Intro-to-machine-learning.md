@@ -63,6 +63,33 @@ Com tudo preparado, utilizei os comandos abaixo para iniciar o terraform:
 - **terraform init =** Inicia o terraform criando o arquivo .terraform na pasta, faz a leitura de todos os arquivos que contém a extensão .tf no nome.
 - **terraform init -upgrade =** Faz as mesmas ações do outro comando, porém atualiza também todos os plugins que você tem
 
+**Pasta .terraform =** Contém tudo que o binário local precisa para realizar as execuções.
+
+Eu prefiro sempre iniciar com o que tem a flag de upgrade, pois caso tenha algo desatualizado ele ja atualiza, resultado do comando:
+
+<figure>
+<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
+<figcaption>Fig 3. Terraform init.</figcaption>
+</figure>
+
+Após iniciado, vamos criar uma máquina lá na AWS utilizando o código **main.tf** e **ec2.tf**
+
+**main.tf**: 
+
+```terraform
+provider "aws" {
+    region = "us-east-1"
+    version = "~> 2.7"
+}
+
+terraform {
+    backend "s3" {
+        bucket = "nomedoseubucket"
+        key = "terraform-test-2.tfstate"
+        region = "us-east-1"
+    }
+}
+```
 
 
 **This article is for Demo purpose**
@@ -127,7 +154,7 @@ __import__(module_name)
 
 In Python, it's possible for a function or a method to return multiple values. We can do this simply by separating each return value by a comma:
 
-```py
+```terraform
 def test():
     return 100, "foo"
 
