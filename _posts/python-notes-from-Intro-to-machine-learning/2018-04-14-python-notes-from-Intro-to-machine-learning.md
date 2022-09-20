@@ -74,7 +74,7 @@ Eu prefiro sempre iniciar com o que tem a flag de upgrade, pois caso tenha algo 
 
 Após iniciado, vamos criar uma máquina lá na AWS utilizando o código **main.tf** e **ec2.tf**
 
-## **main.tf**: 
+#### **main.tf**: 
 ```terraform
 provider "aws" {
     region = "us-east-1"
@@ -91,7 +91,7 @@ terraform {
 ```
 
 
-## **ec2.tf**:
+#### **ec2.tf**:
 ```terraform
 resource "aws_instance" "mwtt4" {
     ami = "ami-0b0ea68c435eb488d"
