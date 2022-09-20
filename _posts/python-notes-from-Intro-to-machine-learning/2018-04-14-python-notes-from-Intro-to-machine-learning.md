@@ -1,5 +1,5 @@
 ---
-title: Terraform Básico - 1
+title: Terraform Básico "#" 1
 date: 2022-07-09 10:00:00 +07:00
 tags: [terraform, devops]
 description: Explicando o básico do Terraform.
@@ -12,6 +12,15 @@ Terraform é uma ferramenta IAC open source criada pela [Hashicorp](https://www.
 ### Arquitetura
 
 O Terraform não faz uma comunicação direta com a plataforma, ele faz o uso de Providers que são plugins e esses fazem essa ponte com a cloud
+
+### Como ele funciona?
+
+O binário do terraform lê o arquivo HCL(o seu codigo.tf), publica na cloud e após a publicação é armazeando o estado do que foi feito no arquivo de state.
+
+### Primeiros passos:
+
+De início baixar o binário do terraform no site oficial se você estiver usando Windows, caso esteja no Linux ou MacOs utilizar a linha de comando no terminal mesmo.
+
 
 **This article is for Demo purpose**
 
