@@ -1,8 +1,8 @@
 ---
 title: Terraform Básico - 1
 date: 2022-07-09 10:00:00 +07:00
-tags: [python, machine-learning]
-description: Notes and code snippets of Python that I've been collecting so far throughout the "Intro to Machine Learning" course.
+tags: [terraform, devops]
+description: Explicando o básico do Terraform.
 ---
 
 ### O que é o Terraform?
