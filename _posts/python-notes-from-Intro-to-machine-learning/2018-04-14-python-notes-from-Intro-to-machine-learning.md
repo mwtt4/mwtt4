@@ -72,7 +72,7 @@ Eu prefiro sempre iniciar com o que tem a flag de upgrade, pois caso tenha algo 
 <figcaption>Fig 3. Terraform init.</figcaption>
 </figure>
 
-Após iniciado, vamos criar uma máquina lá na AWS utilizando o código **main.tf** e **ec2.tf**
+Após iniciado, vamos criar uma máquina lá na AWS utilizando o código **main.tf** e **ec2.tf** descritos abaixo:
 
 #### **main.tf**: 
 ```terraform
@@ -109,7 +109,7 @@ Existe também o comando **terraform plan -out infra-1** que envia o plano para 
 
 <figure>
 <img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
-<figcaption>Fig 4. Terraform plan.</figcaption>
+<figcaption>Fig 4. terraform plan.</figcaption>
 </figure>
 
 - o **+** indica que a máquina e os recursos vão ser criados
@@ -118,7 +118,7 @@ Agora vamos utilizar o comando **terraform apply "infra-1"** para criar de fato 
 
 <figure>
 <img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
-<figcaption>Fig 5. Terraform apply.</figcaption>
+<figcaption>Fig 5. terraform apply.</figcaption>
 </figure>
 
 A criação foi feita com sucesso, validando no console da aws:
@@ -130,7 +130,23 @@ A criação foi feita com sucesso, validando no console da aws:
 
 Validando o arquivo de state no bucket:
 
+<figure>
+<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
+<figcaption>Fig 7. Bucket.</figcaption>
+</figure>
 
+Após criado vamos apagar tudo, para isso utilizamos o comando **terraform destroy**:
+
+<figure>
+<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
+<figcaption>Fig 8. terraform destroy.</figcaption>
+</figure>
+
+- o **-** indica que a máquina e os recursos vão ser criados
+
+Feito, muito mais fácil do que passar item por item no console e ir clicando, sem falar que da forma manual a chance de errar é bem grande, no código fica tudo mais prático e padronizado.
+
+Com isso, finalizo aqui essa primeira parte, existem muitas outras funcionalidades do Terraform, mas vou deixar para outros posts.
 
 **This article is for Demo purpose**
 
