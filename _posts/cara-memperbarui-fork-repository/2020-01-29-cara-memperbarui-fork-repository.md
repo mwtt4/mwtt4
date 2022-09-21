@@ -1,13 +1,15 @@
 ---
 layout: post
-title: Writeup Forensics 
+title: Writeup Forensics - TryHackme
 date: 2020-09-02 01:00 +0700
 modified: 2020-09-02 01:00 +0700
 description: Ada dua cara untuk memperbarui forked repository menggunakan web interface yang disediakan oleh github tapi ribet, atau melalui terminal yang lebih ribet lagi.
 tag:
   - forensics
-image: /cara-memperbarui-fork-repository/repo.png
 ---
+
+Nesse post vou mostrar o writeup da sala Forensics do TryHackMe. Para a realização dos challenges é necessário ter um conhecimento prévio de forense digital, pois vamos analisar e coletar informações do dump de memória fornecido.
+
 
 ## Primeiros passos - Task 1 
 
