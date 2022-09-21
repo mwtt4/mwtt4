@@ -88,7 +88,7 @@ Para responder o restante das pergutnas precisamos extrair o dmp dos processos p
 
 ![Resp6](https://i.imgur.com/pdaWIEJ.png)
 
-Com tudo extraido nas pastas, vamos as perguntas. Basicamente precisamos encontrar esses sites dentro dos arquivos que extraimos, para isso utilizarei o comando ***strings*** seguido do grep para filtrar de acordo com o que foi solicitado, ficando da seguinte forma **`strings numero.dmp | grep 'www.\go....\.ru'(Buscar o que começa com www., no meio tem o go e mais 4 caracteres, no final o .ru )`**, fiz isso em cada arquivo dmp e fui encontrando as respostas de acordo com os sites e ips informados nos enunciados. 
+Com tudo extraido nas pastas, vamos as perguntas. Basicamente precisamos encontrar esses sites dentro dos arquivos que extraimos, para isso utilizarei o comando ***strings*** seguido do grep para filtrar de acordo com o que foi solicitado, ficando da seguinte forma **strings numero.dmp | grep 'www.\go....\.ru'(Buscar o que começa com www., no meio tem o go e mais 4 caracteres, no final o .ru )**, fiz isso em cada arquivo dmp e fui encontrando as respostas de acordo com os sites e ips informados nos enunciados. 
 
 ![Resp7](https://i.imgur.com/aR5AEol.png)
 
