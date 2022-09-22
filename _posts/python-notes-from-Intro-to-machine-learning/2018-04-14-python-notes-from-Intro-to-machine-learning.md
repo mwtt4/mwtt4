@@ -16,7 +16,6 @@ O Terraform não faz uma comunicação direta com a plataforma, ele faz o uso de
 
 ![Foto1](https://cdn.hashnode.com/res/hashnode/image/upload/v1657486680501/KahPAd2y3.png?auto=compress,format&format=webp)
 <figure>
-<img src="{{ page.image }}">
 <figcaption>Fig 1. Arquitetura Terraform.</figcaption>
 </figure>
 
