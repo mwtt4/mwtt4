@@ -14,8 +14,9 @@ Terraform é uma ferramenta IAC open source criada pela [Hashicorp](https://www.
 
 O Terraform não faz uma comunicação direta com a plataforma, ele faz o uso de Providers que são plugins e esses fazem essa ponte com a cloud
 
+![Foto1](https://cdn.hashnode.com/res/hashnode/image/upload/v1657486680501/KahPAd2y3.png?auto=compress,format&format=webp)
 <figure>
-<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
+<img src="{{ page.image }}">
 <figcaption>Fig 1. Arquitetura Terraform.</figcaption>
 </figure>
 
