@@ -8,6 +8,8 @@ image: /cara-memperbarui-fork-repository/repo.png
 
 ### O que é o Terraform?
 
+![Foto0](https://cdn.hashnode.com/res/hashnode/image/upload/v1657486474782/EpibwFb2J.png?auto=compress,format&format=webp)
+
 Terraform é uma ferramenta IAC open source criada pela [Hashicorp](https://www.hashicorp.com/) que utiliza a linguagem HCL(derivada do YAML) para o provisionamento de infraestruturas em diversas plataformas cloud.
 
 ### Arquitetura
@@ -37,8 +39,8 @@ Também podemos criar um container com o docker contendo a imagem do terraform, 
 
 Nesse caso escolhi a AWS para o provisionamento da infraestrutura, nela mesmo criei um usuário denominado terraform e apliquei uma role com a policy de administrator apenas para fazer o teste da ferramenta.
 
+![Foto2](https://cdn.hashnode.com/res/hashnode/image/upload/v1657478737979/_bnFkTLz0.png?auto=compress,format&format=webp)
 <figure>
-<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
 <figcaption>Fig 2. Users - AWS.</figcaption>
 </figure>
 
@@ -68,8 +70,9 @@ Com tudo preparado, utilizei os comandos abaixo para iniciar o terraform:
 
 Eu prefiro sempre iniciar com o que tem a flag de upgrade, pois caso tenha algo desatualizado ele ja atualiza, resultado do comando:
 
+
+![Foto3](https://cdn.hashnode.com/res/hashnode/image/upload/v1657481144182/O55OWO_Rb.png?auto=compress,format&format=webp)
 <figure>
-<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
 <figcaption>Fig 3. Terraform init.</figcaption>
 </figure>
 
@@ -108,8 +111,8 @@ Para isso podemos utilizar o comando **terraform plan** que verifica tudo que es
 
 Existe também o comando **terraform plan -out infra-1** que envia o plano para um arquivo binário(nesse caso será o infra-1) assim deixando mais organizado suas alterações futuras.
 
+![Foto4](https://cdn.hashnode.com/res/hashnode/image/upload/v1657486369271/sARxH686S.png?auto=compress,format&format=webp)
 <figure>
-<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
 <figcaption>Fig 4. terraform plan.</figcaption>
 </figure>
 
@@ -117,29 +120,30 @@ Existe também o comando **terraform plan -out infra-1** que envia o plano para 
 
 Agora vamos utilizar o comando **terraform apply "infra-1"** para criar de fato tudo que apareceu na imagem anterior:
 
+![Foto5](https://cdn.hashnode.com/res/hashnode/image/upload/v1657484329372/Yp9kxGPij.png?auto=compress,format&format=webp)
 <figure>
-<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
 <figcaption>Fig 5. terraform apply.</figcaption>
 </figure>
 
 A criação foi feita com sucesso, validando no console da aws:
 
+![Foto6](https://cdn.hashnode.com/res/hashnode/image/upload/v1657484436899/BYmrhw1LP.png?auto=compress,format&format=webp)
 <figure>
-<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
 <figcaption>Fig 6. AWS Result.</figcaption>
 </figure>
 
 Validando o arquivo de state no bucket:
 
+![Foto7](https://cdn.hashnode.com/res/hashnode/image/upload/v1657484547120/TGaKR-Mw0.png?auto=compress,format&format=webp)
 <figure>
-<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
 <figcaption>Fig 7. Bucket.</figcaption>
 </figure>
 
 Após criado vamos apagar tudo, para isso utilizamos o comando **terraform destroy**:
 
+![Foto8](https://cdn.hashnode.com/res/hashnode/image/upload/v1657485459148/pPXngQlOQ.png?auto=compress,format&format=webp)
+![Foto9](https://cdn.hashnode.com/res/hashnode/image/upload/v1657485478296/4ZnDKk3MI.png?auto=compress,format&format=webp)
 <figure>
-<img src="{{ page.image }}" alt="ilustrasi repo yang mau diupdate">
 <figcaption>Fig 8. terraform destroy.</figcaption>
 </figure>
 
